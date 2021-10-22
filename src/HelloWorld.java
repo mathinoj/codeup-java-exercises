@@ -122,13 +122,13 @@ public class HelloWorld {
 //y *= x
 // TODO rewritten above
 
-        int x = 10;
-        int y = 2;
-//        x = x / y;
-//        y = y - x;
-        x /= y;
-        y -= x;
-        System.out.println("y = " + y);
+//        int x = 10;
+//        int y = 2;
+////        x = x / y;
+////        y = y - x;
+//        x /= y;
+//        y -= x;
+//        System.out.println("y = " + y);
 // TODO rewritten above
 
 
@@ -136,11 +136,15 @@ public class HelloWorld {
 
 //Hint: Integer.MAX_VALUE is a class constant (we'll learn more about these later) that holds the maximum value for the int type.
 
-//        int number = 1234567890;
+//        int number = 123456789100;
 //        interger number is too large
-        int number = Interger.MAX_VALUE + 1;
-        // - 1234567890
-        System.out.println(number);
+
+
+//        int number = Interger.MAX_VALUE + 1;
+//        // -123456789100
+//        System.out.println(number);
+
+
 
     }
 }
