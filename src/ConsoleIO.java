@@ -11,9 +11,9 @@ public class ConsoleIO {
 
         String greet = "YO";
         String nombre = "MATT";
-        System.out.printf("%s, %s", nombre, greet);
+        System.out.printf("%s, %s", greet, nombre);
 
-        System.out.print("Enter something: ");
+        System.out.print("\n Enter something: ");
 
 //        String userInput = scanner.next(); Commented out to do next line
         String userInput = scanner.nextLine();
