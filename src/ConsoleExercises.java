@@ -18,11 +18,20 @@ public class ConsoleExercises {
         int userNum = scanner.nextInt();
         System.out.println("You entered:" + userNum + ".");
 
-//        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+//        MIGHT NEED TO UNCOMMENT THIS
 
         System.out.print("Enter 3 words here: ");
-        String userInput = scanner.next(); //TODO THIS WILL NOT OUTPUT A WHOLE SENTENCE, INSTEAD IT WILL STOP AT FIRST WORD OF SENTENCE
-        System.out.println("You entered: -->" + userInput + "<--");
+//        String userInput = scanner.next(); //TODO THIS WILL NOT OUTPUT A WHOLE SENTENCE, INSTEAD IT WILL STOP AT FIRST WORD OF SENTENCE
+//        System.out.println("You entered: -->" + userInput + "<--");
+
+        String wordOne = scanner.next();
+        String wordTwo = scanner.next();
+        String wordThree = scanner.next();
+//        System.out.println("You entered: -->" + userInput + "<--");  <== HOW I DID
+        System.out.printf("1: %s\n2: %s\n3: %s", wordOne, wordTwo, wordThree);
+
+
 
         System.out.print("Enter a full sentence here: ");
         String userInput2 = scanner.nextLine(); // TODO THIS WILL OUTPUT WHOLE SENTENCE
@@ -34,6 +43,9 @@ public class ConsoleExercises {
         System.out.print("Enter Width (in feet) here: ");
         int userWidth = scanner.nextInt();
         System.out.println("You entered: --> \"" + userWidth + "\" <--");
+
+//        String widthString = scanner.nextLine(); THESE TWO LINES IS HOW YOU WOULD DO IF IT WAS A STRING
+//        int width = Integer.parseInt(widthString);
 
         System.out.print("Enter Length (in feet) here: ");
         int userLength = scanner.nextInt();
