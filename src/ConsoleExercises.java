@@ -18,7 +18,7 @@ public class ConsoleExercises {
         int userNum = scanner.nextInt();
         System.out.println("You entered:" + userNum + ".");
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 //        MIGHT NEED TO UNCOMMENT THIS
 
         System.out.print("Enter 3 words here: ");
