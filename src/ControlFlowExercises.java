@@ -59,7 +59,6 @@ public class ControlFlowExercises {
 //        for (int i = 1; i < 100; i++) {
 //            if (((i % 3) == 0) && ((i % 5) == 0))
 //                System.out.println("fizzbuzz");
-//
 //            else if ((i % 3) == 0)
 //                System.out.println("fizz");
 //            else if ((i % 5) == 0)
@@ -94,44 +93,64 @@ public class ControlFlowExercises {
         //Only continue if the user agrees to.
         //Example Output
 
-
+        boolean yayNay;
         Scanner userInt = new Scanner(System.in);
 //        num = sc.nextInt();
 
-
-        System.out.print("Enter number: ");
-//        int userNumber = userInt.nextInt();
+        do {
+            System.out.print("Enter number: ");
+            int userNumber = userInt.nextInt();
 //        System.out.println("Your number is:" + userNumber + ".");
-//        System.out.printf("Number | Squared | Cubed");
-//        System.out.println("------------------------");
-//        for (int y = 1; y <= userNum; y++) {
-//            System.out.println(i *= userNum);
-//"%-7d|%-9d|%-6d\n"
-//        }
-//        }
+            System.out.println("Number | Squared | Cubed"); //YOU HAD printf
+            System.out.println("------ | ------- | -----");
+            for (int y = 1; y <= userNumber; y++) {
+                System.out.printf("%-7d|%-9d|%-6d\n", y, (y * y), (y * y * y)); //YOU ORIGINALLY HAD println
+            }
+            System.out.print("Do you want to continue: [Y/N]");
+            yayNay = userInt.next().equalsIgnoreCase(("y"));
+        } while (yayNay);
 
-        System.out.print("Enter number: ");
-        int userNum = userInt.nextInt();
+//            boolean yayNay;
+//            Scanner userGo = new Scanner(System.in);
+//            do{
+//            System.out.print("Do you want to continue: [Y/N]");
+//                yayNay = userGo.next().equalsIgnoreCase(("y"));
+//            } while (yayNay);
 
-        System.out.println("Number | Squared | Cubed");
-        System.out.println("------ | ------- | -----");
+        //Ask if the user wants to continue.
+        //Assume that the user will enter valid data.
+        //Only continue if the user agrees to.
 
-        for (int x = 1; x <= userNum; x++){
-            System.out.printf("%-7d|%-9d|%-6d\n", x, x * x, x * x * x);
+
+//Scanner sc = new Scanner(System.in);
+//System.out.print("Continue? [y/N] ")
+//String userInput = sc.next();
+//
+//// Don't do this!
+//boolean confirmation = userInput == "y";
+
+
+//        todo userInt.close();**************** put this at end
+        boolean confirm;
+        Scanner grade = new Scanner(System.in);
+        do {
+            System.out.print("Enter number grade: ");
+            int userGrade = grade.nextInt();
+            if (userGrade < 60) {
+                System.out.println("F");
+            } else if (userGrade < 67) {
+                System.out.println("D");
+            } else if (userGrade < 80) {
+                System.out.println("C");
+            } else if (userGrade < 90) {
+                System.out.println("B");
+            } else {
+                System.out.println("A");
+            }
+            System.out.print("Do you want to continue: [Y/N]");
+            confirm = grade.next().equalsIgnoreCase(("y"));
+        } while (confirm);
+
 
     }
-
-
-//                int num;
-//
-//                System.out.print("Enter an integer number: ");
-//                num = sc.nextInt();
-//
-//                System.out.println("Square of " + num + " is: " + Math.pow(num, 2));
-//                System.out.println("Cube of " + num + " is: " + Math.pow(num, 3));
-//                System.out.println("Square Root of " + num + " is: " + Math.sqrt(num));
-//            }
-
-
-}
 }
