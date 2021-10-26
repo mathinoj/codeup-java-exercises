@@ -7,10 +7,9 @@ public class StringExercise {
 //        education = education + ". We don't need no thought control.";
 //        System.out.println(education);
 
-        String learn = "We don't need no education\n" +
-                "We don't need no thought control";
+        String learn = "We don't need no education\nWe don't need no thought control";
         System.out.println(learn);
-
+//        System.out.println(learn.substring(0, 26) + "\n" + learn.substring(27)); TODO alternate way
 
         String sentence = "Check \"this\" out!, \"s inside of \"s!";
         System.out.println(sentence);
