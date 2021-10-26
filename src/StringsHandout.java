@@ -129,6 +129,5 @@ public class StringsHandout {
 //todo SUBSTRINGS
         System.out.println("austinSentence.subSTRING(20,25) = " + austinSentence.substring(20, 25));
 
-//USE SCANNERS LOOPS, ETC
     }
 }
