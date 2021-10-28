@@ -2,10 +2,15 @@ public class Student {
     public String name;
     public String cohort;
     private double grade;
-    private String studentSSN;
+    private String studentDisclosure;
 
     public double shareGrade(){
         return grade; //this allows access
+    }
+
+
+    public String shareDisclosure(){
+        return studentDisclosure;
     }
 
     //Lets add a constructor, which is a METHOD OF OBJECT CREATION
@@ -34,11 +39,11 @@ public class Student {
 
     }
 
-    public Student(String studentName, String studentCohort, double grade, String studentSSN){
+    public Student(String studentName, String studentCohort, double grade, String studentDisclosure){
         this.name = studentName;
         this.cohort = studentCohort;
         this.grade = grade;
-        this.studentSSN = studentSSN;
+        this.studentDisclosure = studentDisclosure;
 
     }
 
@@ -68,9 +73,9 @@ public class Student {
 
 //        Student masuhh = new Student("masuhh", + masuhh.grade);
 
+        Student mcKenneth = new Student("mcKenneth mcHowell", "mcDeimos", 88.8);
 
-
-
+        System.out.println("mcKenneth.grade = " + mcKenneth.grade);
 
 
 
