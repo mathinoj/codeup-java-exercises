@@ -4,7 +4,7 @@ public class Arithmetic {
     public static double pi = 3.14159;
 
 
-    //Static mehods:
+    //Static methods:
     public static int add(int x, int y){
         return x + y;
     };
