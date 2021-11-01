@@ -1,21 +1,45 @@
+import java.util.Arrays;
+
 public class ArraysExercises {
+
+    public static void addPerson(Person[] people, Person newPerson){
+        System.out.println(newPerson.getName());
+        System.out.println(people[0].getName());
+
+        System.out.println("people.length = " + people.length);
+        Person[] nameplusone = Arrays.copyOf(people, people.length + 1);
+
+        System.out.println("nameplusone.length = " + nameplusone.length);
+
+        nameplusone[nameplusone.length-1] = newPerson;
+        for(Person nombre : nameplusone){
+            System.out.println(nombre.getName());
+        }
+    }
 
     public static void main(String[] arg) {
         int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println(numbers);
+//        System.out.println(numbers);
+        //when you run this it gives out the reference memory of the numbers, therefore you need to convert it to a string!
+//        System.out.println(Arrays.toString(numbers)); // this will convert it to an array of numbers
+
+        Person[] people = {new Person("Matt"), new Person("Dave"), new Person("Ned")};
+        Person newPerson = new Person("Don");
+
+        addPerson(people, newPerson);
 
 
-        //Array Basics
-        //
-        //Create a class inside of src named ArraysExercises. Create a main method for this class to do your work.
-        //
-        //What happens when you run the following code? Why is Arrays.toString necessary?
-        //
-        //
-        //int[] numbers = {1, 2, 3, 4, 5};
-        //System.out.println(numbers);
-        //Create an array that holds 3 Person objects. Assign a new instance of the Person class to each element. Iterate through the array and print out the name of each person in the array.
-        //
-        //Create a static method named addPerson. It should accept an array of Person objects, as well as a single person object to add to the passed array. It should return an array whose length is 1 greater than the passed array, with the passed person object at the end of the array.
+//        System.out.println(people);
+        System.out.println(people.length);
+//        System.out.println(Arrays.toString(people));
+
+        for (int i = 0; i < people.length; i++) {
+            System.out.println(people[i].getName());
+            //        System.out.println(Arrays.toString(people));
+        }
+//        for (Person person : people) { //todo THIS IS THE ENHANCED FOR LOOP
+//            System.out.println(person);
+//        } //todo THIS IS THE ENHANCED FOR LOOP
+
     }
 }

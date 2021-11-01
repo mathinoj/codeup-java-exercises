@@ -2,16 +2,16 @@ public class Person{
     private String name;
     public String hello;
 
-    public String getName() {
-////TODO: return the person's name
-        return name;
-    }
-
     public Person(String name) {
 
         this.name = name;
 //        System.out.println("A Person is born!");
 
+    }
+
+    public String getName() {
+////TODO: return the person's name
+        return name;
     }
 
 
