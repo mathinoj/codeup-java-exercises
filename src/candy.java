@@ -9,12 +9,12 @@ public class candy {
 //          name = candyName;
 //          size = "unknown";
           this.name = name;
-          this.size = "unknown";
+          this.size = "unknown-size";
      } //todo STEP 1
 
-     public void talkAboutCandy(){
+     public void talkAboutCandy(){ // todo BONUS
           System.out.printf("Ahhh, a %s! I see that you got the %s of it. Sounds good! :) %n ", this.name, this.size);
-     }
+     } // todo BONUS
 
      public candy(String name, String size){ // todo STEP 2
           this.name = name; // todo ALL this is OVERLOADING, and is second constructor
@@ -23,16 +23,16 @@ public class candy {
 
      public static void main(String[] args) { //todo STEP 2 as a test
 
-          candy unknownCandy = new candy("dat candy");
+          candy unknownCandy = new candy("name brand candy");
 
           System.out.println("unknownCandy.name = " + unknownCandy.name);
           System.out.println("unknownCandy.size = " + unknownCandy.size); //todo STEP 2 as a test
-          unknownCandy.talkAboutCandy();
+          unknownCandy.talkAboutCandy(); // todo BONUS
 
           candy funSnickers = new candy("Snickers", "fun-size");
           System.out.println("funSnickers = " + funSnickers.name);
           System.out.println("funSnickers = " + funSnickers.size);
-          funSnickers.talkAboutCandy();
+          funSnickers.talkAboutCandy(); // todo BONUS
 
 
      }
