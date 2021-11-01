@@ -14,6 +14,7 @@ public class StudentTest {
         Student samClems = new Student("Sam Clems", "Texas", 95.3, "7777");
         System.out.println("samClemens.studentDisclosure = " + samClems.shareDisclosure());
 
+
     }
 
 }
