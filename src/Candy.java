@@ -77,7 +77,7 @@ public class Candy {
                String descriptors = Arrays.toString(singleCandy.descriptors);
                descriptors = descriptors.substring(1, descriptors.length() -1); //SUBSTRING REMOVES BRACKETS
                System.out.printf("Here's a %s that is %s - it's described as having the following traits: %s%n", singleCandy.name, singleCandy.size, descriptors);
-//               System.out.printf("Here's a %s that is %s - it's described as having the following traits: %s%n", singleCandy.name, singleCandy.size, Arrays.toString(singleCandy.descriptors)); // LIKE THIS WILL LEAVE BRACKETS
+//               System.out.printf("Here's a %s that is %s - it's described as having the following traits: %s%n", singleCandy.name, singleCandy.size, Arrays.toString(singleCandy.descriptors)); // LIKE THIS WILL LEAVE BRACKETS, and you WOULD COMMENT OUT THE FIRST TWO PARTS************
           }
      }
 }

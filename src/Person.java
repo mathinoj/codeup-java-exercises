@@ -1,12 +1,20 @@
 public class Person{
     private String name;
+//    private int age; // NEEDS TO BE DONE FOR EMPLOYEE, this was example, we changed it to the one below
+    protected int age; // this was changed. Protected shares with superclass(ie PERSON class) and any of its subclasses(ie EMPLOYEE class)*********
     public String hello;
 
-    public Person(String name) {
+    public Person(){} //STEP 1 11/2 LEC we did this for the Employee class cuz it was yelling at us. Doing it like this is called a DEFAULT CONSTRUCTOR
 
+
+    public Person(String name) {
         this.name = name;
 //        System.out.println("A Person is born!");
+    }
 
+    public Person(String name, int age){
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
@@ -23,12 +31,8 @@ public class Person{
 
 
     public void sayHello() {
-////TODO: print a message to the console using the person's name
-//        return String.format("Hello from %s!", this.name);
-//        return String.format("Hello from %s!", name);
-
-        this.hello = hello;
-
+//TODO: print a message to the console using the person's name
+        System.out.println("Hello, there " + this.name);
     }
 
 
