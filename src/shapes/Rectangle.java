@@ -1,12 +1,13 @@
 package shapes;
 
+
 public class Rectangle {
     protected int length;
     protected int width;
 
-//Rectangle should define a constructor that accepts two numbers for length and width, and sets those properties.
+    public Rectangle(){} //default
 
-    public Rectangle (int length, int width){ //pulled this from MethodsExercise class //int is datatype
+    public Rectangle (int length, int width){ //int is datatype, and this thing is a constructor line 12-15
         this.length = length;
         this.width = width;
         }
