@@ -5,9 +5,8 @@ public class Circle {
 
     //constructor below this
     public Circle(double radius){ //THIS constructor was provided by curriculum
-//        radius = radius; //MIGHT BE ALSO ABLE TO DO LIKE THIS
-       radius = radius;
-       this.radius = radius; // the above doesn't work cuz when both have the same name it doesn't recognize. Therefore use 'this.'
+//       radius = radius;
+       this.radius = radius; //
     }
 
     public double getArea(){
