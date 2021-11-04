@@ -1,48 +1,24 @@
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class ServerNameGenerator {
+    //Create two arrays whose elements are strings: one with at least 10 adjectives, another with at least 10 nouns.
+    public static String[] adjectives = {"Cruel", "Fantastic", "Gentle", "Huge", "Perfect", "Rough", "Sharp", "Charming", "Tasty", "Zealous"};
+    public static String[] nouns = {"cat", "sock", "ship", "hero", "monkey", "baby", "match", "hair", "pizza", "Army"};
 
-
-
-
-    public static void random(String[] adjectives, String[] nouns){
-
-    }
-
-    public static void addPerson(Person[] people, Person newPerson){
-        System.out.println(newPerson.getName());
-        System.out.println(people[0].getName());
-
-        System.out.println("people.length = " + people.length);
-        Person[] nameplusone = Arrays.copyOf(people, people.length + 1);
-
-        System.out.println("nameplusone.length = " + nameplusone.length);
-
-        nameplusone[nameplusone.length-1] = newPerson;
-        for(Person nombre : nameplusone){
-            System.out.println(nombre.getName());
-        }
-    }
-
-    public static void main(String[] arg) {
-        String[] adjectives = {"Cruel", "Fantastic", "Gentle", "Huge", "Perfect", "Rough", "Sharp", "Charming", "Tasty", "Zealous"};
-        String[] nouns = {"cat", "sock", "ship", "hero", "monkey", "baby", "match", "hair", "pizza", "Army"};
-            System.out.println("nouns.length = " + nouns.length);
-            System.out.println("adjectives.length = " + adjectives.length);
-//        Person newElement = new String("%s-$s", adjectives, nouns);
-
+    //the parameter we will pass will be an ARRAY OF STRINGS
+    public static String randomElement(String[] adjNou) {
+        //FROM CURRICULUM - Create a method that will RETURN a random element from an array of strings. LOOK AT 'RETURN'****
+        return adjNou[(int) Math.floor((Math.random() * (adjNou.length - 1)))];
+        //to generate 0-1 to include decimals you do Math.random
+        //Math.floor will return a double so instead you have to put the '(int)' before 'Math.floor'
 
     }
 
-    //int numberOfBugs = (int) Math.floor(Math.random() * 100);
-    //Bug[] myCode = new Bug[numberOfBugs];
+    ////////////////////////////////FIRST DO ALL THE STUFF THAT IS ABOVE, THEN DO BELOW/////////////////////////////////////
+    public static void main(String[] args) {
+        System.out.println("Server name is: ");
+        System.out.println(randomElement(adjectives) + "-" + randomElement(nouns));
+    }
 
 }
-//Create two arrays whose elements are strings: one with at least 10 adjectives, another with at least 10 nouns.
-//Create a method that will return a random element from an array of strings.
-//Add a main method, and inside of your main method select and random noun and adjective and hyphenate the combination and display the generated name to the user.
-//Example Output
-//
-//
-//Here is your server name:
-//dedicated-photon
