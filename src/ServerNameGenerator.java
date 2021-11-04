@@ -20,5 +20,5 @@ public class ServerNameGenerator {
         System.out.println("Server name is: ");
         System.out.println(randomElement(adjectives) + "-" + randomElement(nouns));
     }
-
+//g
 }
