@@ -24,6 +24,7 @@ abstract class Employee implements DailyWork {
         return this.department;
     }
 
+
 //    public String work(); //this wont work cuz there's no method body, to fix this you do below
 //    public abstract String work(); this is tightly coupled
 

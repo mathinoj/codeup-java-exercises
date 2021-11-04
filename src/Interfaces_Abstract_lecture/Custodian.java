@@ -22,7 +22,7 @@ public String work(){
         return "12-1pm";
     }
 
-    @Override
+//    @Override// remove this
     public int dailyPay() {
         return 20;
     }

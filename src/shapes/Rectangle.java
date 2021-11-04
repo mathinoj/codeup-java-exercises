@@ -1,27 +1,51 @@
 package shapes;
 
+//Change your existing Rectangle class to inherit from Quadrilateral and implement Measurable.
+public class Rectangle extends Quadrilateral implements Measurable {
 
-public class Rectangle {
-    protected int length;
-    protected int width;
+    public Rectangle (int length, int width){
+        super(length, width);
+    }
 
-    public Rectangle(){} //default
 
-    public Rectangle (int length, int width){ //int is datatype, and this thing is a constructor line 12-15
-        this.length = length;
-        this.width = width;
-        }
+    public double getPerimeter() {
+        return (length * 2) + (width *2);
+    }
 
-    public int getPerimeter (){
-       return 2 * length + 2 * width;
+
+    public double getArea() {
+        return length * width;
+    }
+
+
+    public int length() {
+        return 0;
+    }
+
+
+    public int width() {
+        return 0;
+    }
+//    protected int length;
+//    protected int width;
+
+//    public Rectangle(){} //default
+
+//    public Rectangle (int length, int width){ //int is datatype, and this thing is a constructor line 12-15
+//        this.length = length;
+//        this.width = width;
+//        }
+
+//    public int getPerimeter (){
+//       return 2 * length + 2 * width;
 //        area = length x width
 //        System.out.println("2 * length + 2 * width = " + 2 * length + 2 * width);
-    }
+//    }
 
-    public int getArea(){
-        return length * width;
+//    public int getArea(){
+//        return length * width;
 //        System.out.println("length * width = " + length * width);
-    }
+//    }
 
 //    public static void main(String[] args) { COMMENTED OUT BUT LEAVE STUFF BELOW FOR FUTURE NOTES
 

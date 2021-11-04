@@ -1,12 +1,36 @@
 package shapes;
 
-public class Square extends Rectangle {
-
+public class Square extends Quadrilateral {
 
     public Square(int side){
         super(side, side);
-        //super is calling parent constructor (Rectangle constructor)
     }
+
+
+    public double getPerimeter() {
+        return length * 4;
+    }
+
+
+    public double getArea() {
+        return length * width;
+    }
+
+
+    public int length() {
+        return 0;
+    }
+
+
+    public int width() {
+        return 0;
+    } //before you quad you had 'Rectangle'
+
+
+//    public Square(int side){
+//        super(side, side);
+        //super is calling parent constructor (Rectangle constructor)
+//    }
 
 
 
