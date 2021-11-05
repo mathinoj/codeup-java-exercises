@@ -10,6 +10,10 @@ public class Collections {
 
 //        ArrayList<String> nameOfVar = new ArrayList<>();
 
+        //method example
+//     public static String randomElem(String[] add){
+//     return add[(int)Math.floor(Math.random()*(add.length -1))];
+//     }
 
         ArrayList<String> students = new ArrayList<>();
 
@@ -22,8 +26,9 @@ public class Collections {
         ArrayList<Integer> myFavoriteNums = new ArrayList<>();
         myFavoriteNums.add(13); //this and three lines down is called METHOD OVERLOADING
         myFavoriteNums.add(222);
-        myFavoriteNums.add(0, 7);
-        myFavoriteNums.add(1, 42);// if you wanted to move element to the end or ArrayList you'd do (index: 3, element: 42)
+        myFavoriteNums.add(myFavoriteNums.size(), 7);
+        myFavoriteNums.add(myFavoriteNums.size(), 42);// if you wanted to move element to the end or ArrayList you'd do (index: 3, element: 42)
+        myFavoriteNums.add(myFavoriteNums.size(), 21);
         myFavoriteNums.add(2, 21);
 
         System.out.println(myFavoriteNums); //all this shows that it will send to/as strings
@@ -45,10 +50,10 @@ public class Collections {
 //        myFavoriteNums.remove(5); DOING THIS WOULD REMOVE THE SECOND 21 THAT ISN'T THERE RIGHT NOW
         System.out.println(myFavoriteNums);
 
-//        ArrayList<Integer> removalList = new ArrayList<>();
-//        removalList.add(21);
-//        myFavoriteNums.removeAll(removalList);
-//        System.out.println(myFavoriteNums); THESE FOUR THINGS WOULD REMOVE MULTIPLE 21s
+        ArrayList<Integer> removalList = new ArrayList<>();
+        removalList.add(21);
+        myFavoriteNums.removeAll(removalList);
+        System.out.println(myFavoriteNums); //THESE FOUR THINGS WOULD REMOVE MULTIPLE 21s
         //if you wanted to remove additional numbers you would do removalList.add(NUMBER YOU WANT REMOVED) below removalList.add(21);
 
         System.out.println("~~~~~~~~~~~~~~~~~~~Hash Maps ~~~~~~~~~~~~~~~~~~~\n");
