@@ -46,12 +46,20 @@ public class Student {
 
     public static void main(String[] args) {
 
-        Student x = new Student("X");
+        Student x = new Student("X"); //'Student' is the object
+        Student y = new Student("Y");
         x.addGrade(90);
         x.addGrade(80);
         x.addGrade(90);
+
+        y.addGrade(44);
+        y.addGrade(100);
+        y.addGrade(99);
 //        System.out.printf("average =%d ", x.average());
         x.getGradeAverage();
+        System.out.println();
+        y.getGradeAverage();
+
 
 //        System.out.println(grades);
 
