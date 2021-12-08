@@ -3,6 +3,11 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        Loop Basics
+//REFACTOR 11/29
+        int i = 5;
+        while(i<=15){
+            System.out.print(" " + i++);
+        };
 
 //        While
 //        int i = 5;
@@ -13,6 +18,35 @@ public class ControlFlowExercises {
 
 //        Do While
 //TODO
+
+//        int x = 0;
+//        do{
+//            System.out.println(x);
+//            x += 2;
+//        } while(x <= 100);
+//
+//int y = 100;
+//        do{
+//            System.out.println(y);
+//            y -= 5;
+//        }while(y >= -10);
+
+        long z = 2;
+        do{
+            System.out.println(z);
+            z *= z;
+        }while(z <= 1000000);
+
+//        int w = 1;
+//        do{
+//            System.out.println(w++);
+//        }while(w <= 100);
+       for(int w = 1; w <= 100; w++){
+           if(w % 3){
+
+           }
+       }
+
 //int a = 0;
 //        do{
 //            System.out.println(a);
@@ -93,22 +127,22 @@ public class ControlFlowExercises {
         //Only continue if the user agrees to.
         //Example Output
 
-        boolean yayNay;
-        Scanner userInt = new Scanner(System.in);
-//        num = sc.nextInt();
+//        boolean yayNay;
+//        Scanner userInt = new Scanner(System.in);
+//        num = sc.nextInt(); //KEEP THIS OUT
 
-        do {
-            System.out.print("Enter number: ");
-            int userNumber = userInt.nextInt();
-//        System.out.println("Your number is:" + userNumber + ".");
-            System.out.println("Number | Squared | Cubed"); //YOU HAD printf
-            System.out.println("------ | ------- | -----");
-            for (int y = 1; y <= userNumber; y++) {
-                System.out.printf("%-7d|%-9d|%-6d\n", y, (y * y), (y * y * y)); //YOU ORIGINALLY HAD println
-            }
-            System.out.print("Do you want to continue: [Y/N]");
-            yayNay = userInt.next().equalsIgnoreCase(("y"));
-        } while (yayNay);
+//        do {
+//            System.out.print("Enter number: ");
+//            int userNumber = userInt.nextInt();
+//        System.out.println("Your number is:" + userNumber + "."); //KEEP THIS OUT
+//            System.out.println("Number | Squared | Cubed"); //YOU HAD printf
+//            System.out.println("------ | ------- | -----");
+//            for (int y = 1; y <= userNumber; y++) {
+//                System.out.printf("%-7d|%-9d|%-6d\n", y, (y * y), (y * y * y)); //YOU ORIGINALLY HAD println
+//            }
+//            System.out.print("Do you want to continue: [Y/N]");
+//            yayNay = userInt.next().equalsIgnoreCase(("y"));
+//        } while (yayNay);
 
 //            boolean yayNay;
 //            Scanner userGo = new Scanner(System.in);
@@ -131,25 +165,25 @@ public class ControlFlowExercises {
 
 
 //        todo userInt.close();**************** put this at end
-        boolean confirm;
-        Scanner grade = new Scanner(System.in);
-        do {
-            System.out.print("Enter number grade: ");
-            int userGrade = grade.nextInt();
-            if (userGrade < 60) {
-                System.out.println("F");
-            } else if (userGrade < 67) {
-                System.out.println("D");
-            } else if (userGrade < 80) {
-                System.out.println("C");
-            } else if (userGrade < 90) {
-                System.out.println("B");
-            } else {
-                System.out.println("A");
-            }
-            System.out.print("Do you want to continue: [Y/N]");
-            confirm = grade.next().equalsIgnoreCase(("y"));
-        } while (confirm);
+//        boolean confirm;
+//        Scanner grade = new Scanner(System.in);
+//        do {
+//            System.out.print("Enter number grade: ");
+//            int userGrade = grade.nextInt();
+//            if (userGrade < 60) {
+//                System.out.println("F");
+//            } else if (userGrade < 67) {
+//                System.out.println("D");
+//            } else if (userGrade < 80) {
+//                System.out.println("C");
+//            } else if (userGrade < 90) {
+//                System.out.println("B");
+//            } else {
+//                System.out.println("A");
+//            }
+//            System.out.print("Do you want to continue: [Y/N]");
+//            confirm = grade.next().equalsIgnoreCase(("y"));
+//        } while (confirm);
 
 
     }

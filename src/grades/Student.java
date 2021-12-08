@@ -7,11 +7,18 @@ public class Student {
     private ArrayList<Integer> grades;
 
     public Student(String name) { //constructor
+//    public void setName(String name){
         this.name = name;
         this.grades = new ArrayList<Integer>(); //The grades property should be an ArrayList of integers
-//        ArrayList<Integer> grades = new ArrayList<Integer>();
-
     }
+
+    //public void setName(String nameMovie) {
+    //        this.name = nameMovie;
+    //    }
+
+    //The student class should have a constructor that sets name property, and initializes the grades property as an empty ArrayList.
+
+
 
     //grades.add(10);
     //grades.add(13);
