@@ -19,6 +19,11 @@ public class Input {
         return this.scanner.nextLine(); // I DONT KNOW WHY SHAN DID THIS BUT SHE SAID AT LEAST THE ERROR GOES AWAY
     }
 
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return this.scanner.nextLine();
+    }
+
     public boolean yesNo() { //this is a method
         //from curriculum 'The yesNo method should return true if the user enters y, yes, or variants thereof, and false otherwise.'
         String userInput = scanner.nextLine(); //This stores the userInput into the variable cuz it compares with y/yes
@@ -42,18 +47,39 @@ public class Input {
 //       //Integer.valueOf(String s);
 //   }
 
-    public int getInt() { //this is a method
-        String userInput = getString(); //
+
+
+//    public int getInt() { //this is a method
+//        String userInput = getString(); //
+//        try {
+//            Integer.valueOf(userInput);
+//        } catch (NumberFormatException e) {
+//            System.out.println("Enter a NUMBER");
+//            return getInt();
+//        }
+//        return Integer.valueOf(userInput);
+//        return Integer.parseInt(userInput); THIS IS RECOMMENDED BY IntelliJ
+//    }
+    public int getInt(){
         try {
-            Integer.valueOf(userInput);
-        } catch (NumberFormatException e) {
-            System.out.println("Enter a NUMBER");
+            String userInput = getString();
+            return Integer.valueOf(userInput);
+        } catch (NumberFormatException nfe){
+            System.out.println("Enter a Number");
             return getInt();
         }
-        return Integer.valueOf(userInput);
-//        return Integer.parseInt(userInput); THIS IS RECOMMENDED BY IntelliJ
     }
 
+    public int getInt(String prompt) { //this is a method
+        int number;
+        try{
+            number = Integer.valueOf(getString(prompt));
+            return number;
+        } catch (NumberFormatException nfe){
+            System.out.println("Wrong input, try again.");
+            return getInt(prompt);
+        }
+    }
 //public static void main(String[] args) {
 //    String indentationPreference;
 //    try {
@@ -79,17 +105,19 @@ public class Input {
     }
 
     public double getDouble() { //this is a method
-//        return scanner.nextDouble();
-
-        String userDouble = getString();
         try {
-            Double.valueOf(userDouble);
-        } catch (NumberFormatException e) {
-            System.out.println("Enter a NUMBER");
-            return getInt();
+            String userDouble = getString();
+            return Double.valueOf(userDouble);
+        } catch (NumberFormatException nfe) {
+            System.out.println("Enter a DOUBLE");
+            return getDouble();
         }
-        return Double.valueOf(userDouble);
     }
+
+//    public double getDouble(String prompt){
+//        System.out.println(prompt);
+//        return getDouble();
+//    }
 
     public double getDouble(String prompt) {
         double number;
@@ -101,6 +129,8 @@ public class Input {
             return getDouble(prompt);
         }
     }
+
+
 
 // public double getDouble(String prompt) {
 //        double number;
